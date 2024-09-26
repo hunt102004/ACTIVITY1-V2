@@ -34,4 +34,4 @@ include_once 'config/settings-configuration.php';
         </div>
     </div>
 </body>
-</html>
+</html>     
