@@ -179,7 +179,7 @@
                     </div>
                     <h1>Welcome</h1>
                     <p>Hello, <strong>$email</strong></p>
-                    <p>Welcome to Andrei System</p>
+                    <p>Welcome to Raul System</p>
                     <p>If you did not sign up for an account, you can safely ignore this email.</p>
                     <p>Thank you!</p>
                 </div>
@@ -285,8 +285,8 @@
             $mail->addAddress($email);
             $mail->Username = $smtp_email;
             $mail->Password = $smtp_password;
-            $mail->setFrom($smtp_email, "Andrei");
-            $$mail->$Subject = $subject;
+            $mail->setFrom($smtp_email, "Raul");
+            $mail->Subject = $subject;
             $mail->msgHTML($message);
             $mail->Send();
 

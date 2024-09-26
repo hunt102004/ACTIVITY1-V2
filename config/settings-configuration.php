@@ -2,12 +2,10 @@
 session_start();
 include_once __DIR__.'/../database/dbconnection.php';
 
-//error reporting
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-//CSRF TOKEN
 if(empty($_SESSION['csrf_token'])){
     $csrf_token = bin2hex(random_bytes(22));
     $_SESSION['csrf_token'] = $csrf_token;
@@ -27,7 +25,6 @@ class SystemConfig{
         $db = $database->dbConnection();
         $this->conn = $db;
 
-        //get email configuration
         $stmt = $this->runQuery("SELECT * FROM email_config");
         $stmt->execute();
         $email_config = $stmt->fetch(PDO::FETCH_ASSOC);
